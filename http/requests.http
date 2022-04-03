@@ -1,0 +1,40 @@
+POST http://localhost:5007/authenticate HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "aestas",
+    "password": "953"
+}
+
+GET http://localhost:5007/setup HTTP/1.1
+
+###
+GET http://localhost:5007/brands HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://localhost:5007/occasions HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:5007/sneakers HTTP/1.1
+Content-Type: application/json
+
+{
+    "SneakerId": "62138bfcbd6da692308c77a7",
+    "Name" : "TestSneaker",
+    "Brand" : {
+      "Name": "TestBrand"
+    },
+    "Stock": 32,
+    "Occasions": [
+      {
+        "Description": "TestOccasion"
+      }],
+    "Price": 123.45
+}
+
+###
+GET http://localhost:5007/sneakers/62138bfcbd6da692308c77a7 HTTP/1.1
+Content-Type: application/json
+
